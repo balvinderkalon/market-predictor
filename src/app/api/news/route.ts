@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const cached = getCache<any>('news', 10 * 60 * 1000);
+    const cached = getCache<any>('news');
     if (cached) return NextResponse.json(cached);
 
     const data = await fetch(`${FMP_BASE}/stock_news?limit=10&apikey=${FMP_KEY}`).then(r => r.json());

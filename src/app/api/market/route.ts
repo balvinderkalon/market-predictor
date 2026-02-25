@@ -29,7 +29,7 @@ async function fetchFMP(url: string) {
 
 export async function GET() {
   try {
-    const cached = getCache<AssetData[]>('market-data', 3 * 60 * 1000);
+    const cached = getCache<AssetData[]>('market-data');
     if (cached) return NextResponse.json(cached);
 
     // Fetch quotes

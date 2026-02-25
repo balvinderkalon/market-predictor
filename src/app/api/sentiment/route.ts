@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const cached = getCache<any>('sentiment', 10 * 60 * 1000);
+    const cached = getCache<any>('sentiment');
     if (cached) return NextResponse.json(cached);
 
     // Fetch VIX quote

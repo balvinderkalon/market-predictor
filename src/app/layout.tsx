@@ -6,8 +6,13 @@ import { Providers } from './providers';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Market Predictor V3',
-  description: 'Real-time market analysis with technical indicators',
+  title: 'Market Genius | Real-Time Market Intelligence',
+  description: 'AI-powered real-time market analysis with technical indicators, live streaming prices, and market briefs',
+  openGraph: {
+    title: 'Market Genius',
+    description: 'AI-powered real-time market intelligence dashboard',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
